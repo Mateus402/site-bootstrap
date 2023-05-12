@@ -1,0 +1,73 @@
+<section class="container-sm px-5">
+
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Primeiro nome" aria-label="First name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Ultimo nome" aria-label="Last name">
+        </div>
+    </div>
+    <br>
+
+    <div class="input-group mb-5">
+        <span class="input-group-text" id="basic-addon1">Nome de usuário</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+
+    <form class="" id="email">
+        <div class="col-sm-5">
+            <label for="floatingInputValue">Informe seu E-mail</label>
+            <input type="email" class="form-control" id="floatingInputValue" placeholder="seu@email.com">
+        </div>
+        <div class="col-sm-5">
+            <label for="floatingInputValue">Confirme seu E-mail</label>
+            <input type="email" class="form-control" id="confirmaEmail" placeholder="seu@email.com">
+            <br>
+        </div>
+
+        <script>
+            document.querySelector('#email').addEventListener('submit', function (event) {
+                var password = document.querySelector('#floatingInputValue').value;
+                var confirmPassword = document.querySelector('#confirmaEmail').value;
+
+                if (password !== confirmPassword) {
+                    alert('Os E-mails não são iguais!');
+                    event.preventDefault();
+                }
+            });
+        </script>
+        <button type="submit" class="btn btn-primary">Validar</button>
+        <br>
+        <br>
+    </form>
+
+
+    <form class="row gx-3 gy-2 align-items-center" id="formSenha">
+
+        <div class="col-sm-5">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+        </div>
+        <div class="col-sm-5">
+            <label for="confirmPassword">Confirmar Senha</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme sua senha">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+
+        <script>
+            document.querySelector('#formSenha').addEventListener('submit', function (event) {
+                var password = document.querySelector('#password').value;
+                var confirmPassword = document.querySelector('#confirmPassword').value;
+
+                if (password !== confirmPassword) {
+                    alert('As senhas não são iguais!');
+                    event.preventDefault();
+                }
+            });
+        </script>
+    </form>
+
+</section>

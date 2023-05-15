@@ -4,6 +4,7 @@ const app = express()
 const Port = 4040
 
 const cadastro = require('./routes/cadastro')
+const login = require('./routes/login')
 
 
 app.set('view engine', 'ejs')
@@ -16,6 +17,8 @@ app.get('/home', (req, res) => {
 })
 
 app.use(cadastro)
+
+app.use(login)
 
 
 

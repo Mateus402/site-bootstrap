@@ -1,52 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
-    background-image: url('../imagens/fundo.jpg');
-    background-size: cover;
-    background-position: center;
+    /* background-image: url('../imagens/fundo.jpg'); */
+    /* background-size: cover; */
+}
 
+:root {
+    --bk-color-conteudo: #F0F0F0;
+    --bk-color: #3C486B;
+    --bk-color-form: rgba(168, 243, 243, 0.514);
+    --font-color-title: darkgoldenrod;
+    --font-color-parag: sienna;
+    --font-family: 'Arvo', serif;
+    --font-size-parag: 1.5rem;
+    --font-family-form: 'Quicksand', sans-serif;;
 }
 
 main {  
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--bk-color-form);
+    font-family: var(--font-family);
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .conteudo {
-    display: flex;
-    justify-content: center;
-    margin: 15%;
-    gap: 20px;
-    background-color: antiquewhite;
-    border-radius: 50px;
+    /* border: #3C486B 3px solid;
+    border-radius: 50px; */
+    align-items: center;
+    padding: 50px;
 }
 
 .formulario {
-    background-color: azure;
-    width: 100%;
-    height: 24.9cm;
+    background-color: var(--bk-color-form);
+    font-family: var(--font-family-form);
 }
 
 .conteudo_texto {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
+    margin: 5px;
 }
 
 .conteudo_texto_titulo {
-    color: darkgoldenrod;
+    color: var(--font-color-title);
+    font-size: 3em;
 }
 
 .conteudo_texto_parag {
-    color: sienna;
-    font-size: 2rem;
+    padding: 5px;
 }
 
 .conteudo_imagens {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0 0 0 10px;
-    padding: 15px;
+    display: inline-grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+
 }
+
+.imagem {
+    margin: 10px;
+}
+
+.conteudo_texto_parag {
+    color: var(--font-color-parag);
+    font-size: var(--font-size-parag);
+}
+
+.conteudo_parag {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+
+
+
